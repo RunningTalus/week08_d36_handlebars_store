@@ -8,34 +8,35 @@
 </head>
 <body>
 	<div class="row">
-	
+
 		<div id="product-container" class="col-xs-12 col-sm-6 col-md-8">
 			<h1>Handlebars Store</h1>
 			<div class="new-products">
+			<!-- Product-Template Handlebars script to be injected here -->
 			</div>
 		</div>
 
 		<div id="second-product-container" class="col-xs-6 col-lg-4">
+			<h2>Wishlist Items</h2>
 			<ul id="wishlist">
+			<!-- Wishlist-Template Handlebars script to be injected here -->
 			</ul>
 		</div>
 
 	</div>
 
-	<div class="row">
-	</div>
-
 	<script id="product-template" type="text/x-handlebars-template">
 		<div class="product">
-			<h2>{{title}}</h2>
+			<h2 class="title">{{title}}</h2>
 			<img class="product-image" src={{image}}><br>
-			<button type="button" class="btn btn-success purchase">Add to cart &#36;{{cost}}</button></br>
+			<button type="button" class="btn btn-success purchase">Add to cart &#36;{{cost}}</button><br>
+			<button type="button" class="btn btn-primary wishlist">Add {{title}} to Wishlist</button><br>
 			<br>
 		</div>	
 	</script>
 
 	<script id="wishlist-template" type="text/x-handlebars-template">
-	<li><button type="button" class="btn btn-success wishlist">Add {{title}} to Wishlist</li>
+	<li class="wishlist-list-items">{{title}}</li>
 	</script>
 
 	<script src="./js/jquery-1.11.1.min.js"></script>
