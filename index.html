@@ -7,20 +7,20 @@
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 <body>
-	<div id="product container">
-		<h1>Handlebars Store</h1>
-		<div class="new-products">
-		</div>
-		
-		<script id="product-template" type="text/x-handlebars-template">
-			<div class="product">
-				<p>Title: {{title}}</p>
-				<p>&#36;{{cost}}<br>
-				<a href>{{image}}</a><br>
-				<br>
+	<div class="row">
+		<div id="product-container" class="col-xs-12 col-sm-6 col-md-8">
+			<h1>Handlebars Store</h1>
+			<div class="new-products">
 			</div>
-		</script>
-
+			<script id="product-template" type="text/x-handlebars-template">
+				<div class="product">
+					<h2>{{title}}</h2>
+					<img class="product-image" src={{image}}><br>
+					<button type="button" class="btn btn-success purchase">Add to cart &#36;{{cost}}</button></br>
+					<br>
+				</div>
+			</script>
+		</div>
 	</div>
 
 	<script src="./js/jquery-1.11.1.min.js"></script>
@@ -28,7 +28,5 @@
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/products-data.js"></script>
 	<script src="./js/main.js"></script>
-
-
 </body>
 </html>

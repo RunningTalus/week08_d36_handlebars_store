@@ -15,8 +15,7 @@ $(document).on('ready', function() {
   	// console.log(item);
   	var item1 = template(item);
   	$('.new-products').append(item1);
-  	console.log(item1);
+  	// console.log(item1);
   }
-
 
 });
