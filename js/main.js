@@ -18,4 +18,18 @@ $(document).on('ready', function() {
   	// console.log(item1);
   }
 
+  var wishlistTemplate = $('#wishlist-template');
+  console.log(wishlistTemplate);
+
+  var wishlistText = wishlistTemplate.html();
+  console.log(wishlistText);
+
+  var wishTemplateText = Handlebars.compile(wishlistText);
+
+  for (var j=0; j<productsData.productsList.length; j++){
+    var indivItem = productsData.productsList[j];
+    var indivItemJ = wishTemplateText(indivItem);
+    $('#wishlist').append(indivItemJ);
+  }
+
 });
